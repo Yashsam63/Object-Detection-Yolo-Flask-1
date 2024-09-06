@@ -100,8 +100,5 @@ def gen_frames():
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000)
-    #http://localhost:8000/video for video source
-    #http://localhost:8000 for image source
+    app.run(debug=True)
